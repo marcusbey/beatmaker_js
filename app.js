@@ -20,8 +20,32 @@ class Drumkit {
         const activeBars = document.querySelectorAll(`.b${step}`);
         //loop over the pads 
         activeBars.forEach(bar => {
-            bar.style.animation = `playTrack 0.3s alternate ease-in-out 2`;
+            bar.style.animation = `playTrack 0.2s alternate ease-in-out 2`;
             console.log(bar);
+            //check if pad is active
+            if(bar.classList.contains('active')){
+                //check each sound
+                if (bar.classList.contains('pad-kick')){
+                    this.kickAudio.play();
+                    this.kickAudio.currentTime = 0;
+                }
+                if (bar.classList.contains('pad-clap')){
+                    this.clapAudio.play();
+                    this.clapAudio.currentTime = 0;
+                }
+                if (bar.classList.contains('pad-crash')){
+                    this.crashAudio.play();
+                    this.crashAudio.currentTime = 0;
+                }
+                if (bar.classList.contains('pad-hihat')){
+                    this.hihatAudio.play();
+                    this.hihatAudio.currentTime = 0;
+                }
+                if (bar.classList.contains('pad-snare')){
+                    this.snareAudio.play();
+                    this.snareAudio.currentTime = 0;
+                }
+            }
         });
         this.index ++;
         console.log(step);
