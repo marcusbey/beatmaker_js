@@ -15,7 +15,7 @@ class Drumkit {
         this.index = 0;
         this.bpm = 200;
         this.isPlaying = null;
-        this.selects = document.querySelector('select');
+        this.selects = document.querySelectorAll('select');
     }
 
     //get the active pad 
@@ -104,7 +104,7 @@ drumKit.playBtn.addEventListener("click", function(){
 
 
 drumKit.selects.forEach(select => {
-    select.addEventListener('change', function(){
-        drumKit.changeSound();
+    select.addEventListener('change', function(e){
+        drumKit.changeSound(e);
     } )
 })
