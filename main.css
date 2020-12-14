@@ -19,9 +19,9 @@ i, svg {
 }
 
 .pad {
-    width: 3.5rem;
+    width: 3rem;
     height: 4rem;
-    margin: 0.4rem;
+    margin: 0.5rem;
     cursor: pointer;
 }
 
@@ -38,31 +38,31 @@ i, svg {
 }
 
 .pad-hihat {
-    background-color:rgb(241, 218, 173);
+    background-color:rgb(248, 255, 181);
 }
 
 .pad-snare {
     background-color:rgb(196, 195, 247);
 }
 
-.pad-kick .active {
+.pad-kick.active {
     background-color:rgb(127, 199, 247);
 }
 
-.pad-clap .active {
-    background-color:rgb(129, 241, 185);
+.pad-clap.active {
+    background-color:rgb(110, 233, 171);
 }
 
-.pad-crash .active {
-    background-color:rgb(247, 130, 130);
+.pad-crash.active {
+    background-color:rgb(243, 125, 125);
 }
 
-.pad-hihat .active {
-    background-color:rgb(247, 204, 119);
+.pad-hihat.active {
+    background-color:rgb(250, 218, 115);
 }
 
-.pad-snare .active {
-    background-color:rgb(149, 147, 243);
+.pad-snare.active {
+    background-color:rgb(131, 129, 245);
 }
 
 
@@ -129,4 +129,14 @@ select {
     padding: 0.5rem;
     font-size: 1rem;
     margin-left: 0.5rem;
+}
+
+
+@keyframes playTrack{
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
 }
