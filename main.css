@@ -129,7 +129,7 @@ i, svg {
     color: white;
     border: none;
     cursor: pointer;
-    margin-top: 2rem;
+    margin-top: 1rem;
 
 }
 
@@ -145,6 +145,27 @@ select {
     margin-left: 0.5rem;
 }
 
+.tempo {
+    margin: 0.5rem;
+    width: 40%;
+}
+
+.tempo-slider {
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    background:rgb(184, 184, 184);
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.tempo p { 
+    font-size: 1rem;
+    margin: 1rem;
+    text-align: center;
+
+}
 
 @keyframes playTrack{
     from {

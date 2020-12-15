@@ -158,7 +158,13 @@ class Drumkit {
         }
     }
     }
+
+    changeTempo(e){
+        console.log(e);
+    }
+
 }
+
 
 const drumKit = new Drumkit();
 
