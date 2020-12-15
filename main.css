@@ -133,6 +133,12 @@ i, svg {
 
 }
 
+
+.mute.active {
+    background-color: rgb(233, 233, 233);
+    color: rgb(32, 32, 32);
+}
+
 select {
     padding: 0.5rem;
     font-size: 1rem;
