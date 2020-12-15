@@ -161,9 +161,19 @@ class Drumkit {
     }
 
     changeTempo(e){
-        console.log(e);
+        const tempoValue = document.querySelector('.tempo-nbr');
+        this.bpm = e.target.value;
+        tempoValue.innerText = e.target.value;
     }
 
+    updateTempo(){
+        clearInterval(this.isPlaying);
+        this.isPlaying = null;
+        const playBtn = document.querySelector('.playBtn');
+        if (playBtn.classList.contains('active')){
+            this.start();
+        }
+    }
 }
 
 
@@ -200,3 +210,7 @@ drumKit.muteBtns.forEach(btn => {
 drumKit.tempoSlider.addEventListener('change', function(e){
         drumKit.changeTempo(e);
     });
+
+drumKit.tempoSlider.addEventListener('change', function(e){
+    drumKit.updateTempo(e);
+});
