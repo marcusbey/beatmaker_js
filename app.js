@@ -2,16 +2,18 @@ class Drumkit {
     constructor() {
         this.playBtn = document.querySelector('.playBtn');
         this.pads = document.querySelectorAll('.pad');
-        this.currentKick = "./allSounds/kick-classic.wav";
-        this.currentclap = "./allSounds/clap-808.wav";
-        this.currentcrash = "./allSounds/crash-noise.wav";
-        this.currenthihat = "./allSounds/hihat-808.wav";
-        this.currentsnare = "./allSounds/snare-808.wav";
+        // this.currentKick = "./allSounds/kick-classic.wav";
+        // this.currentclap = "./allSounds/clap-analog.wav";
+        // this.currentcrash = "./allSounds/crash-noise.wav";
+        // this.currenthihat = "./allSounds/hihat-analog.wav";
+        // this.currentsnare = "./allSounds/snare-acoustic01.wav";
+        // this.currenttom = "./allSounds/tom-808.wav";
         this.kickAudio = document.querySelector('.kick-sound');
         this.clapAudio = document.querySelector('.clap-sound');
         this.crashAudio = document.querySelector('.crash-sound');
         this.hihatAudio = document.querySelector('.hihat-sound');
         this.snareAudio = document.querySelector('.snare-sound');
+        this.tomAudio = document.querySelector('.tom-sound');
         this.index = 0;
         this.bpm = 200;
         this.isPlaying = null;
@@ -28,7 +30,6 @@ class Drumkit {
         //loop over the pads 
         activeBars.forEach(bar => {
             bar.style.animation = `playTrack 0.2s alternate ease-in-out 2`;
-            console.log(bar);
             //check if pad is active
             if(bar.classList.contains('active')){
                 //check each sound
@@ -52,10 +53,13 @@ class Drumkit {
                     this.snareAudio.play();
                     this.snareAudio.currentTime = 0;
                 }
+                if (bar.classList.contains('pad-tom')){
+                    this.tomAudio.play();
+                    this.tomAudio.currentTime = 0;
+                }
             }
         });
         this.index ++;
-        console.log(step);
     }
   
     start() {
@@ -81,8 +85,29 @@ class Drumkit {
         }
     }
 
-    changeSound(){
-
+    changeSound(e){
+        const selectionName = e.target.name;
+        const selectionValue = e.target.value;
+        switch (selectionName){
+            case  "select-kick":
+                this.kickAudio.src = selectionValue;
+                break;
+            case  "select-clap":
+                this.clapAudio.src = selectionValue;
+                break;
+            case "select-crash":
+                this.crashAudio.src = selectionValue;
+                break;
+            case "select-hihat":
+                this.hihatAudio.src = selectionValue;
+                break;
+            case "select-snare":
+                this.snareAudio.src = selectionValue;
+                break;
+            case "select-tom":
+                this.tomAudio.src = selectionValue;
+                break;
+        }
     }
 
     }
