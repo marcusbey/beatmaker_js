@@ -19,6 +19,7 @@ class Drumkit {
         this.isPlaying = null;
         this.selects = document.querySelectorAll('.select');
         this.muteBtns = document.querySelectorAll('.mute');
+        this.tempoSlider = document.querySelector('.tempo-slider');
     }
 
     //get the active pad 
@@ -194,3 +195,8 @@ drumKit.muteBtns.forEach(btn => {
         drumKit.mute(e);
     });
 });
+
+
+drumKit.tempoSlider.addEventListener('change', function(e){
+        drumKit.changeTempo(e);
+    });
