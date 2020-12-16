@@ -121,7 +121,7 @@ i, svg {
     transition: all 0.5s ease-in-out;
 }
 
-.playBtn {
+.playBtn, .resetBtn {
     margin: 0 auto;
     padding: 1rem 2rem;
     font-size: 1.5rem;

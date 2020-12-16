@@ -20,6 +20,7 @@ class Drumkit {
         this.selects = document.querySelectorAll('.select');
         this.muteBtns = document.querySelectorAll('.mute');
         this.tempoSlider = document.querySelector('.tempo-slider');
+        this.resetBtn = document.querySelector('.resetBtn');
     }
 
     //get the active pad 
@@ -174,6 +175,12 @@ class Drumkit {
             this.start();
         }
     }
+
+    reset(){
+        this.pads.forEach(pad => {
+            pad.classList.remove('active');
+        })
+    }
 }
 
 
@@ -190,6 +197,11 @@ drumKit.pads.forEach(pad => {
 drumKit.playBtn.addEventListener("click", function(){
     drumKit.updateBtn();
     drumKit.start();
+});
+
+
+drumKit.resetBtn.addEventListener("click", function(){
+    drumKit.reset();
 });
 
 
