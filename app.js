@@ -11,7 +11,7 @@ class Drumkit {
         this.index = 0;
         this.bpm = 200;
         this.isPlaying = null;
-        this.selects = document.querySelectorAll('.select');
+        this.selects = document.querySelectorAll('select');
         this.muteBtns = document.querySelectorAll('.mute');
         this.tempoSlider = document.querySelector('.tempo-slider');
         this.resetBtn = document.querySelector('.resetBtn');
