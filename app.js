@@ -2,12 +2,6 @@ class Drumkit {
     constructor() {
         this.playBtn = document.querySelector('.playBtn');
         this.pads = document.querySelectorAll('.pad');
-        // this.currentKick = "./allSounds/kick-classic.wav";
-        // this.currentclap = "./allSounds/clap-analog.wav";
-        // this.currentcrash = "./allSounds/crash-noise.wav";
-        // this.currenthihat = "./allSounds/hihat-analog.wav";
-        // this.currentsnare = "./allSounds/snare-acoustic01.wav";
-        // this.currenttom = "./allSounds/tom-808.wav";
         this.kickAudio = document.querySelector('.kick-sound');
         this.clapAudio = document.querySelector('.clap-sound');
         this.crashAudio = document.querySelector('.crash-sound');
